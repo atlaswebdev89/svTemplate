@@ -1,0 +1,54 @@
+.global-overlay {
+	top: 0;
+	left: 0;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(34, 34, 34, 0.7);
+	z-index: 5000;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 200ms ease-out;
+	box-sizing: border-box;
+}
+.body-open {
+	overflow: hidden;
+}
+.flaticon-cross {
+	font-family: Icons;
+}
+.flaticon-cross:before {
+    content: "\f106";
+}
+
+.offcanvas-navigation {
+	visibility: hidden;
+	opacity: 0;
+	width: 320px;
+	min-height: 100vh;
+	display: block;
+	height: 100%;
+	position:fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	background-color: #272727;
+	
+	transform: translate(-200px, 0);
+	transition: all 400ms ease-out;
+	overflow: auto;
+}
+.offcanvas-navigation__inner {
+	padding-top: 80px;
+	padding: 50px;
+	
+}
+.offcanvas-navigation__inner a{
+	color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.overlay-open, .menu-open {
+	opacity: 1;
+	visibility: visible;
+	transform: translate(0, 0);
+}

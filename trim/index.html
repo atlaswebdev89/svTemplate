@@ -29,25 +29,46 @@
   </head>
   <body>
 
-  	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Trim.</a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span>
-	      </button>
+    <!--Start nav MENU -->
+          	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        	    <div class="container">
+        	      <a class="navbar-brand" href="index.html">SV-KUPE</a>
+            	      <button class="navbar-toggler" type="button">
+                    	        <div class="icon nav-icon-4">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                <div>                               
+            	      </button>
+                      
+        	        <div class="collapse navbar-collapse" id="ftco-nav">
+                	        <ul class="navbar-nav ml-auto">
+                        	          <li class="nav-item active has-children">
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="services.html" class="nav-link">Services &amp; Pricing</a></li>
-	          <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
-	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
+                                                
+                                            
+                                        <a href="index.html" class="nav-link">Home <i class="oi oi-chevron-bottom"></i></a>
+                                      <ul class="sub-menu">
+                                            <li>
+                                                <a href="#">Link</a>
+                                            </li>
+                                             <li>
+                                                <a href="#">Link</a>
+                                            </li>
+                                             <li>
+                                                <a href="#">Link</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                        	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                        	          <li class="nav-item"><a href="services.html" class="nav-link">Services &amp; Pricing</a></li>
+                        	          <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                        	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                        	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                	        </ul>
+        	        </div>
+        	    </div>
+	       </nav>
     <!-- END nav -->
     
     <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
@@ -768,17 +789,34 @@
                 <aside class="offcanvas-navigation" id="offcanvasnav">
                     <div class="offcanvas-navigation__inner">
                         <a href="" class="btn-close">
-                            <i class="flaticon-cross"></i>
+                            <i class="oi oi-x"></i>
                             <span class="sr-only">Close Offcanvas Navigtion</span>
                         </a>
                         <div class="offcanvas-navigation__top">
                             <ul class="offcanvas-menu">
-                                    <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-                                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                                    <li class="nav-item"><a href="services.html" class="nav-link">Services &amp; Pricing</a></li>
-                                    <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
-                                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                                    <li class="nav-item active has-children" >
+                                        <span class="menu-expand">
+                                                <i class="oi oi-chevron-bottom"></i>
+                                            </span>
+                                        <a href="index.html" class="nav-link ">Home</a>
+                                        <ul class="sub-menu">
+                                            <li>
+                                                <a href="#">Link</a>
+                                            </li>
+                                             <li>
+                                                <a href="#">Link</a>
+                                            </li>
+                                             <li>
+                                                <a href="#">Link</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item has-children" ><a href="about.html" class="nav-link">About</a></li>
+                                    <li class="nav-item"><a href="services.html" class="nav-link ">Services &amp; Pricing</a></li>
+                                    <li class="nav-item"><a href="gallery.html" class="nav-link ">Gallery</a></li>
+                                    <li class="nav-item"><a href="blog.html" class="nav-link ">Blog</a></li>
+                                    <li class="nav-item"><a href="contact.html" class="nav-link ">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -787,9 +825,9 @@
 
 
         <!-- Qicuk View Modal End -->
-        <!-- Global Overlay Start -->
-        <div class="global-overlay"></div>
-        <!-- Global Overlay -->
+            <!-- Global Overlay Start -->
+            <div class="global-overlay"></div>
+            <!-- Global Overlay -->
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -805,8 +843,8 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
+ 
+  
   <script src="js/main.js"></script>
   <script src="js/atlas.js"></script>
     

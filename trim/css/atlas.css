@@ -1,89 +1,143 @@
-.global-overlay {
-	top: 0;
-	left: 0;
-	position: fixed;
-	height: 100%;
-	width: 100%;
-	background-color: rgba(34, 34, 34, 0.7);
-	z-index: 5000;
-	visibility: hidden;
-	opacity: 0;
-	transition: all 200ms ease-out;
-	box-sizing: border-box;
-}
+/*START OFFcavnas menu vertical*/
+			
+			.global-overlay {
+				top: 0;
+				left: 0;
+				position: fixed;
+				height: 100%;
+				width: 100%;
+				background-color: rgba(34, 34, 34, 0.7);
+				z-index: 5000;
+				visibility: hidden;
+				opacity: 0;
+				transition: all 200ms ease-out;
+				box-sizing: border-box;
+			}
 
-.body-open {
-	overflow: hidden;
-}
+			.body-open {
+				overflow: hidden;
+			}
 
-.offcanvas-navigation {
-	visibility: hidden;
-	opacity: 0;
-	width: 350px;
-	min-height: 100vh;
-	display: block;
-	height: 100%;
-	position:fixed;
-	top: 0;
-	left: 0;
-	z-index: 9999;
-	background-color: #b34a4a;
-	padding: 0 10px;
-	transform: translate(-200px, 0);
-	transition: all 400ms ease-out;
-	overflow: auto;
-}
-.offcanvas-navigation__inner {
-	padding: 70px 0;
-}
-.offcanvas-navigation__inner a{
-	color: rgba(255, 255, 255, 0.9) !important;	
-}
+			.offcanvas-navigation {
+				position:fixed;
+				top: 0;
+				left: 0;
+				visibility: hidden;
+				opacity: 0;
+				width: 350px;
+				min-height: 100vh;
+				display: block;
+				height: 100%;
+				z-index: 9999;
+				background-color: #b34a4a;
+				padding: 0 10px;
+				transform: translate(-200px, 0);
+				transition: all 400ms ease-out;
+				overflow: auto;
+			}
+			.offcanvas-navigation__inner {
+				padding: 70px 0;
+			}
+			.offcanvas-navigation__inner a{
+				color: rgba(255, 255, 255, 0.9) !important;	
+			}
 
-.offcanvas-navigation__inner a:hover{
-	padding-left: 5px;
-}
-.offcanvas-menu li{
-	list-style: none;
-	position: relative;
-}
+		
+			.offcanvas-menu li{
+				list-style: none;
+				position: relative;
+				padding:4px;
+			}
+			.offcanvas-menu a:hover{
+				transform: translate(5px, 0);
+			}
 
-.offcanvas-menu  span.menu-expand {
-	position: absolute;
-	top:10px;
-	right: 2px;
-	width: 50px;
-	margin-right: 10px;
-	line-height: 20px;
-	text-align: center;
-}
-.collapse span.menu-expand {
-	position: absolute;
-	top: 1px;
-	right: 1px;
-}
-.sub-menu {
-	display: none;
-}
-.offcanvas-navigation__top {
-	margin:0 20px;
-}
-.overlay-open, .menu-open {
-	opacity: 1;
-	visibility: visible;
-	transform: translate(0, 0);
-}
-.btn-close {
-	position: absolute;
-	right: 25px;
-	top: 35px;
 
-}
-@media (max-width: 400px) {
-	.offcanvas-navigation {
-		width: 230px;
-	}
-}
+			.offcanvas-menu  span.menu-expand {
+				position: absolute;
+				top:10px;
+				right: 2px;
+				width: 50px;
+				margin-right: 10px;
+				line-height: 20px;
+				text-align: center;
+				z-index: 10;
+			}
+			.sub-menu {
+				display: none;
+			}
+			.offcanvas-navigation__top {
+				margin:0 20px;
+			}
+
+			.overlay-open, .menu-open {
+				opacity: 1;
+				visibility: visible;
+				transform: translate(0, 0);
+			}
+			.btn-close {
+				position: absolute;
+				right: 25px;
+				top: 35px;
+
+			}
+			@media (max-width: 400px) {
+				.offcanvas-navigation {
+					width: 230px;
+				}
+			}
+
+			
+
+/*END OffCavnasMenu*/
+
+/*START sub menu main*/
+	
+			.navbar-nav {
+				position: relative;
+				list-style: none;	
+			}
+			.navbar-nav a i {
+				padding-left: 5px;
+			}
+
+			.sub-menu-main {
+				list-style: none;
+				background-color: #1b1b1b;
+				position: absolute;	
+				padding: 0;
+				min-width: 200px;
+				visibility: hidden;
+				opacity: 0;
+				display: block;
+				transition: all 400ms ease-out;
+			}
+			.sub-menu-main li {
+				position: relative;
+				background-color: #212121;
+				border-bottom: 1px solid #3c3b3b;
+				border-radius: 2px;	
+				box-shadow: 1px 5px 10px -5px black;
+			}
+			.sub-menu-main li a {
+				padding-left: 20px !important;
+				transition: all 450ms ease-out;	
+			}
+
+			.sub-menu-main li:last-child {
+				border-bottom: 0;
+			}
+			.sub-menu-main li a:hover {	
+				color: #ce9c6b !important;
+				transform: translate(10px, 0);
+			}
+			.navbar-nav li:hover .sub-menu-main {
+				opacity: 1;
+				visibility: visible;	
+			}
+
+/*END sub menu main*/
+
 /* START Burger botton for menu*/
 			/* nav-icon-4 */
 			.nav-icon-4{

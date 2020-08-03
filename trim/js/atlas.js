@@ -8,9 +8,6 @@
 		$header = $('.header'),		
 		$headerInner = $('.header__inner');
 		
-
-
-
 $('.navbar-toggler').click(function () {
 	$('.global-overlay').addClass('overlay-open');
 	$('.offcanvas-navigation').addClass('menu-open');
@@ -19,7 +16,9 @@ $('.navbar-toggler').click(function () {
 
 });
 
-$('.global-overlay').click(function () {
+$('.global-overlay').click(function (e) {
+	e.preventDefault();
+	e.stopPropagation();
 	$('.global-overlay').removeClass('overlay-open');
 	$('.offcanvas-navigation').removeClass('menu-open');
 	$('body').removeClass('body-open');
@@ -28,6 +27,7 @@ $('.global-overlay').click(function () {
 
 $('.btn-close').on('click', function(e){
 	e.preventDefault();
+	e.stopPropagation();
 	var $this = $(this);
 	 		$this.parents('.menu-open').removeClass('menu-open');
 			$($overlay).removeClass('overlay-open');
@@ -40,8 +40,18 @@ $('.btn-close').on('click', function(e){
 //Скрипт выделения активного меню
 $('span.menu-expand i').on('click', function (e) {
 	e.preventDefault();	
-		$('ul.sub-menu').slideToggle(250);
+	var $this = $(this);	
+		$submenu = $this.parent().parent().children('.sub-menu');
+		//скрываем все кроме того, что должны открыть
+		$('.has-children ul.sub-menu').not($submenu).hide(200);
+		$submenu.toggle(300);
+	
+  
 });
 
 	
 
+//защита от двойного клика 
+// кнопка возврата к верху страницы
+//Активный пункт меню (основном и offcavnas)
+//Эффекты в боковое меню

@@ -205,3 +205,25 @@
 			}
 
 /* END Burger botton for menu*/
+
+/* Scroll to Top Start */
+			.scroll-to-top {
+				position: fixed;
+				right: 30px;
+				bottom: 30px;
+				height: 50px;
+				width: 50px;
+				font-size: 20px;
+				z-index: 2000;
+				text-align: center;
+				line-height: 50px;
+				opacity: 0;
+				background-color: #212121;
+				
+				-webkit-transition: all 300ms ease;
+			    -moz-transition: all 300ms ease;
+			    -ms-transition: all 300ms ease;
+			    -o-transition: all 300ms ease;
+				transition: all 300ms ease-out;
+			}
+/* Scroll to Top END */

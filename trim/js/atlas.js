@@ -59,7 +59,7 @@ $('span.menu-expand i').on('click', function (e) {
 // Эффекты в боковое меню
 // Защита от двойного клика 
 //Активный пункт меню (основном и offcavnas)
-<<<<<<< HEAD
+
 
 
 //Active ItemMenu
@@ -85,7 +85,7 @@ $('.navbar a, .offcanvas-menu a').each(function() {
                 
             }
 });
-=======
+
 //Эффекты в боковое меню
 
 /**********************
@@ -113,4 +113,4 @@ $('.navbar a, .offcanvas-menu a').each(function() {
 /*****************************/
 
 //Кроссбраузерность
->>>>>>> 8b9c2ba77d1ef8d850300c75f6aa729f607eb789
+

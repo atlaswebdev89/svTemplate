@@ -209,6 +209,10 @@
 			  left:10px;
 			  top: 15px;
 			  width: 18px;
+			  -webkit-transition: all 300ms cubic-bezier(.8, .5, .2, 1.4);
+			    -moz-transition: all 300ms cubic-bezier(.8, .5, .2, 1.4);
+			    -ms-transition: all 300ms cubic-bezier(.8, .5, .2, 1.4);
+			    -o-transition: all 300ms cubic-bezier(.8, .5, .2, 1.4);
 			  transition: .3s cubic-bezier(.8, .5, .2, 1.4);
 			  transform: rotate(-45deg);
 			  transition-delay: 100ms;
@@ -235,5 +239,8 @@
 			    -ms-transition: all 300ms ease;
 			    -o-transition: all 300ms ease;
 				transition: all 300ms ease-out;
+				
+				-webkit-animation: pulse 2s infinite;
+    			animation: pulse 2s infinite;
 			}
 /* Scroll to Top END */

@@ -1,4 +1,6 @@
-// Variables
+/***********************************************************************************************
+	* Variables
+***************************************************************************************************/
   
 	var $html = $('html'),
 		$body = $('body'),
@@ -6,9 +8,12 @@
 		$pageUrl = window.location.href.substr(window.location.href.lastIndexOf("/") + 1),
 		$overlay = $('.global-overlay'),
 		$offcavnas = $('.offcanvas-navigation');
-
 		$header = $('.header'),		
 		$headerInner = $('.header__inner');
+
+/***********************************************************************************************
+	* Открытие бокового вертикального меню
+***************************************************************************************************/
 
 $('.navbar-toggler').click(function () {
 			$overlay.addClass('overlay-open');
@@ -19,6 +24,10 @@ $('.navbar-toggler').click(function () {
 				}
 });
 
+/***********************************************************************************************
+	* Обработчик клика по overlay фону при открытом боковом меню. Меню при клике по фону закрывается
+***************************************************************************************************/
+
 $overlay.click(function (e) {
 	e.preventDefault();
 	e.stopPropagation();
@@ -27,6 +36,11 @@ $overlay.click(function (e) {
 		$('body').removeClass('body-open');
 		$('.navbar-toggler div').removeClass("open");
 });
+
+
+/******************************************************************
+	* Обработчик клика на крестику в боковом вертикальном меню
+*******************************************************************/
 
 $('.btn-close').on('click', function(e){
 	e.preventDefault();
@@ -38,9 +52,10 @@ $('.btn-close').on('click', function(e){
 			$body.toggleClass('body-open');
 	});
 
+/*****************************************************************
+	* Аккордеон одна только открыта и найти родительское под меню
+*****************************************************************/
 
-//Сделать аккордеон одна только открыта и найти родительское под меню
-//Скрипт выделения активного меню
 $('span.menu-expand i').on('click', function (e) {
 	e.preventDefault();	
 	var $this = $(this);	
@@ -50,20 +65,10 @@ $('span.menu-expand i').on('click', function (e) {
 		$submenu.toggle(200);
 });
 
-	
+/******************************************************
+	* Active ItemMenu - Активный пункт меню
+********************************************************/
 
-
-// Кнопка возврата к верху страницы
-
-
-// Эффекты в боковое меню
-// Защита от двойного клика 
-//Активный пункт меню (основном и offcavnas)
-
-
-
-//Active ItemMenu
-//Активный пункт меню
 $('.navbar a, .offcanvas-menu a').each(function() {
     	var url = window.location.pathname;
     	var index = $(this).attr('href');    
@@ -72,8 +77,7 @@ $('.navbar a, .offcanvas-menu a').each(function() {
         	$(this).parent().addClass('active');
     }else if (index == '/') {
         index = '/index.html/';
-    } 
-    
+    }    
     	//Поиск в строке pathUri искомого URL при вложенной структуре меню
         if ((url.indexOf(index)) > -1) 
             {            	
@@ -81,16 +85,13 @@ $('.navbar a, .offcanvas-menu a').each(function() {
                 		//Проверка наличия родительского элемента              
                 		$(this).parent().parent('.sub-menu').show(200);
                 		$(this).parents('.has-children').addClass('active');                               	
-                		$(this).parents('.has-children').addClass('active');
-                
+                		$(this).parents('.has-children').addClass('active');               
             }
 });
 
-//Эффекты в боковое меню
-
-/**********************
-	* Scroll To Top
-	***********************/
+/******************************************************
+	* Scroll To Top - Кнопка возврата к верху страницы
+********************************************************/
 
 		var scrollTop = $(".scroll-to-top");
 		$(window).on('scroll',function() {
@@ -110,7 +111,6 @@ $('.navbar a, .offcanvas-menu a').each(function() {
 			return false;
 		}); 
 
-/*****************************/
 
-//Кроссбраузерность
+
 

@@ -59,6 +59,7 @@ $('span.menu-expand i').on('click', function (e) {
 // Эффекты в боковое меню
 // Защита от двойного клика 
 //Активный пункт меню (основном и offcavnas)
+<<<<<<< HEAD
 
 
 //Active ItemMenu
@@ -84,3 +85,32 @@ $('.navbar a, .offcanvas-menu a').each(function() {
                 
             }
 });
+=======
+//Эффекты в боковое меню
+
+/**********************
+	* Scroll To Top
+	***********************/
+
+		var scrollTop = $(".scroll-to-top");
+		$(window).on('scroll',function() {
+			var topPos = $(this).scrollTop();
+
+			if (topPos > 350) {
+				$(scrollTop).css("opacity", "1");
+			} else {
+				$(scrollTop).css("opacity", "0");
+			}
+		}); 
+		//Плавный переход к TOP page
+		$(scrollTop).on('click',function() {
+			$('html, body').animate({
+				scrollTop: 0
+			}, 800);
+			return false;
+		}); 
+
+/*****************************/
+
+//Кроссбраузерность
+>>>>>>> 8b9c2ba77d1ef8d850300c75f6aa729f607eb789

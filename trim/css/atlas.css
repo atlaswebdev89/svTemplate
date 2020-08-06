@@ -244,3 +244,11 @@
     			animation: pulse 2s infinite;
 			}
 /* Scroll to Top END */
+
+/*Хак - устранения дрожания верхнего меню на мобильных экранах*/
+@media (max-width: 991.98px) {
+	.ftco-navbar-light {
+	    position: fixed !important;
+	}
+}
+/**/

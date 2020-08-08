@@ -103,7 +103,7 @@ $('.navbar a, .offcanvas-menu a').each(function() {
 				$(scrollTop).css("opacity", "0");
 			}
 		}); 
-		//Плавный переход к TOP page
+		//Плавный переход к top page
 		$(scrollTop).on('click',function() {
 			$('html, body').animate({
 				scrollTop: 0

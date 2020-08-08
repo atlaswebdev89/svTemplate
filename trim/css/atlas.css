@@ -24,7 +24,7 @@
 				left: 0;
 				visibility: hidden;
 				opacity: 0;
-				width: 350px;
+				width: 380px;
 				min-height: 100vh;
 				display: block;
 				height: 100%;
@@ -92,7 +92,18 @@
 			}
 			@media (max-width: 400px) {
 				.offcanvas-navigation {
-					width: 230px;
+					width: 300px;
+				}
+			}
+			@media (max-width: 330px) {
+				.offcanvas-navigation {
+					width: 260px;
+				}
+			}
+
+			@media (max-width: 270) {
+				.offcanvas-navigation {
+					width: 80px;
 				}
 			}
 		

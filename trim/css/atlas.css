@@ -263,3 +263,189 @@
 	}
 }
 /**/
+
+.namefirm {
+	font-size: 24px;
+	font-family: all;
+	color: #dbdbdb;
+	font-style: italic;
+}
+.test {
+	font-size: 20px;
+	text-align: center;
+}
+/* Section "О нас" и "виды деятельности" */
+.parent-one {
+	margin: 20px;
+}
+.parent-one div:first-child {
+	border-right: 1px solid #333; 
+	padding-right: 45px;
+}
+.about-jobs {
+	font-size: 16px;	
+}
+.about-jobs h3 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.about-jobs ul { 
+	padding:0;
+}
+.about-jobs li { 
+	list-style: none;
+}
+@media (max-width: 768px) {
+	.parent-one div:first-child  {
+	    border-right: none;
+	    border-bottom: 1px solid #333;
+	    padding: 15px;
+	    margin-bottom: 15px;
+	}
+}
+
+
+/*Style Catalog Main Page*/
+.ftco-gallery {
+	padding-bottom: 50px;
+}
+.item{
+    margin: 0;
+    width: 100%;  
+    height: 300px;
+    overflow: hidden;
+    padding: 2px;
+    position: relative;
+}
+.item .fadeText {	
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	bottom: 0;
+	width: 100%;
+	background-color: #000;
+	opacity: 0.7;
+}
+                    
+.item img{                      
+    margin: 0 auto;
+    object-fit: cover;
+    height: 300px;
+    width: 100%;  
+}
+
+.item h3{
+	font-size: 18px;		
+	font-style: italic;	
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	padding: 0;
+	margin: 0;
+}
+.item a:hover>img {
+	opacity: 0.6;
+}
+.item a:hover>.fadeText{
+	opacity: 1;
+}
+
+@media  (max-width: 1050px) {
+    .item {
+        height: 260px;
+        margin: 0 auto;       
+    }
+    .item img {
+        width: 100%;
+        height: 260px;
+    }
+    .item h3 {
+       font-size: 16px;
+    }
+}
+
+@media  (max-width: 870px) {
+	.items {	
+		flex-basis: 50% !important;
+	}
+    .item {
+        height: 240px;
+        margin: 0;            
+    }
+    .item h3 {   	
+        font-size: 16px;
+    }
+}
+
+@media  (max-width: 767px) {
+    .item {
+        height: 200px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .item img {
+        width: 100%;
+        height: 200px;
+    }
+    .item h3 {
+       font-size: 16px;
+    }
+}
+
+/*END 	Style Catalog Main Page*/
+
+.nord{
+	height: 190px;
+	width: 100%;
+}
+
+.nord img{
+	object-fit: cover;
+	height: 190px;
+	width: 100%;
+}
+.product-entry .text h3{
+	height: 35px;
+	margin-bottom: 10px;
+}
+
+@media (max-width: 1320px){
+	.nord{
+		height: 156px;
+		width: 100%;
+		}
+
+	.nord img{
+		object-fit: cover;
+		height: 156px;
+		width: 100%;
+		}
+}
+
+@media (max-width: 1091px){
+	.nord{
+		height: 111px;
+		width: 100%;
+		}
+
+	.nord img{
+		object-fit: cover;
+		height: 111px;
+		width: 100%;
+	}
+}
+
+
+@media (max-width: 767px){
+	.nord{
+		height: auto;
+		width: 100%;
+	}
+
+.nord img{
+		object-fit: cover;
+		height: auto;
+		width: 100%;
+	}
+}

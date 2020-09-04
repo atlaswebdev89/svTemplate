@@ -264,8 +264,7 @@
 }
 /**/
 
-.namefirm {
-	font-size: 24px;
+.namefirm {	
 	font-family: all;
 	color: #dbdbdb;
 	font-style: italic;
@@ -283,7 +282,9 @@
 	padding-right: 45px;
 }
 .about-jobs {
-	font-size: 16px;	
+	font-size: 16px;
+	padding-right: 20px;
+	padding-left: 20px;	
 }
 .about-jobs h3 {
 	text-align: center;
@@ -449,3 +450,35 @@
 		width: 100%;
 	}
 }
+
+/*Page Clients&Partners*/
+
+.post-profit {
+	border: 1px solid #464646;
+	margin-bottom: 30px;
+	padding: 15px;
+}
+.main-post-container {
+	padding: 5px;
+}
+.main-post-container .meta {
+	margin-bottom: 20px;
+}
+.post-img {
+	display: flex;
+	align-items: flex-start;
+	height: 100%;
+	padding: 10px;
+}
+.post-img img {
+	height: auto;
+	width: 100%;
+}
+.post-text {
+	padding: 10px;
+	padding-left: 20px;
+}
+.post-text .meta {
+	color: #fff;
+}
+

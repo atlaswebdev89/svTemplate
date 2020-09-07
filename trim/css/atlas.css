@@ -482,3 +482,18 @@
 	color: #fff;
 }
 
+.border-a {
+	border: 1px solid #2b2626;
+	border-radius: 20px;
+	height: 100%;
+	padding: 20px;
+}
+.border-a p {
+	margin-bottom: 0;
+}
+.kf-a {
+	font-style: italic;
+	font-size: 35px;
+	font-family: "Cookie", Arial, sans-serif, cursive;
+}
+

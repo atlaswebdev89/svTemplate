@@ -523,6 +523,7 @@
 	padding: 5px;
 	font-size: 18px;
 	color: #ce9c6b;
+	margin-bottom: 0;
 }
 
 .item-img a:hover img {
@@ -553,3 +554,28 @@
 	}
 }
 /* END Catalog*/
+
+.fotorama__stage {
+	margin-bottom: 10px;
+}
+.desc strong {
+	color: #fff;
+}
+
+/*Sidebar Main*/
+.sidebar-1 {
+
+}
+.sidebar-1 ul{
+	list-style: none;
+	padding: 0;
+}
+.sidebar-1 ul li {
+	transition: all 700ms ease-out;
+}
+.sidebar-1 ul li:hover {
+	transform: translate(10px, 0);
+}
+.sidebar-box {
+	border-bottom: 1px solid #464646;
+}

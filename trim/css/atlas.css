@@ -579,3 +579,26 @@
 .sidebar-box {
 	border-bottom: 1px solid #464646;
 }
+/* Оффер блоки с параллаксом*/
+.parallax {
+	position: relative;
+}
+.parallax p {
+	color: #cdcdcd;
+}
+.parallax .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: '';
+	opacity: 0.6;
+	background: #000;
+}
+/*END Offers*/
+
+.img-brand {
+	height: 42px;
+	vertical-align: sub;
+}

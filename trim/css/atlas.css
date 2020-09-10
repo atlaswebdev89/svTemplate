@@ -618,3 +618,11 @@
 }
 /*END LOGO*/
 
+/*Breadcrumbs*/
+.breadcrumbs-custom div{
+	overflow: hidden;
+}
+.breadcrumbs-custom div span {
+	white-space: nowrap;
+}
+/*end Breadcrumbs*/

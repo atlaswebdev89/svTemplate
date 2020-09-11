@@ -8,6 +8,7 @@
 		$pageUrl = window.location.href.substr(window.location.href.lastIndexOf("/") + 1),
 		$overlay = $('.global-overlay'),
 		$offcavnas = $('.offcanvas-navigation');
+		$SubmenuOffcavnas = $('.offcanvas-submenu-navigation');
 		$header = $('.header'),		
 		$headerInner = $('.header__inner');
 
@@ -19,10 +20,23 @@ $('.navbar-toggler').click(function () {
 			$overlay.addClass('overlay-open');
 			$offcavnas.addClass('menu-open');
 			$body.addClass('body-open');
+			//Смена кнопки открытия меню
 				if ($overlay.hasClass('overlay-open')) {
 					$(this).find('div.icon').addClass("open");
 				}
 });
+
+/***********************************************************************************************
+ * Открытие бокового вертикального подменю для разделом каталога
+ ***************************************************************************************************/
+
+$('.submenu-offcavnas').click(function (e) {
+	e.preventDefault();
+	$overlay.addClass('overlay-open');
+	$SubmenuOffcavnas.addClass('menu-open');
+	$body.addClass('body-open');
+});
+
 
 /***********************************************************************************************
 	* Обработчик клика по overlay фону при открытом боковом меню. Меню при клике по фону закрывается
@@ -33,6 +47,7 @@ $overlay.click(function (e) {
 	e.stopPropagation();
 		$overlay.removeClass('overlay-open');
 		$offcavnas.removeClass('menu-open');
+		$SubmenuOffcavnas.removeClass('menu-open');
 		$('body').removeClass('body-open');
 		$('.navbar-toggler div').removeClass("open");
 });
@@ -96,7 +111,6 @@ $('.navbar a, .offcanvas-menu a').each(function() {
 		var scrollTop = $(".scroll-to-top");
 		$(window).on('scroll',function() {
 			var topPos = $(this).scrollTop();
-
 			if (topPos > 350) {
 				$(scrollTop).css("opacity", "1");
 			} else {

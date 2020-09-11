@@ -1,6 +1,5 @@
 /*START OFFcavnas menu vertical*/
-			
-			.global-overlay {
+		.global-overlay {
 				top: 0;
 				left: 0;
 				position: fixed;
@@ -14,14 +13,54 @@
 				box-sizing: border-box;
 			}
 
-			.body-open {
+		.body-open {
 				overflow: hidden;
 			}
 
-			.offcanvas-navigation {
+		.offcanvas-submenu-navigation {
 				position:fixed;
 				top: 0;
 				left: 0;
+				visibility: hidden;
+				opacity: 0;
+				width: 320px;
+				min-height: 100vh;
+				display: block;
+				height: 100%;
+				z-index: 9999;
+				background-color: #484646;
+				padding: 0 30px;
+				transform: translate(-200px, 0);
+				transition: all 400ms ease-out;
+				overflow: auto;
+				}
+				@media (min-width: 768px) {
+					.submenu-offcavnas {
+						visibility: hidden;
+						opacity: 0;
+					}
+				}
+				@media (max-width: 400px) {
+					.offcanvas-submenu-navigation {
+						width: 300px;
+					}
+				}
+				@media (max-width: 330px) {
+					.offcanvas-submenu-navigation {
+						width: 260px;
+					}
+				}
+
+				@media (max-width: 270px) {
+					.offcanvas-submenu-navigation {
+						width: 180px;
+					}
+				}
+
+		.offcanvas-navigation {
+				position:fixed;
+				top: 0;
+				right: 0;
 				visibility: hidden;
 				opacity: 0;
 				width: 380px;
@@ -30,19 +69,22 @@
 				height: 100%;
 				z-index: 9999;
 				background-color: #b34a4a;
-				padding: 0 10px;
-				transform: translate(-200px, 0);
+				padding: 0 30px;
+				transform: translate(200px, 0);
 				transition: all 400ms ease-out;
 				overflow: auto;
 			}
 
 			.offcanvas-navigation__inner {
 				padding: 100px 0;
+
 			}
 			.offcanvas-navigation__inner a{
 				color: rgba(255, 255, 255, 0.9) !important;	
 			}
-
+			.offcanvas-menu {
+				padding-left: 0px;
+			}
 			.offcanvas-menu li{
 				list-style: none;
 				position: relative;
@@ -67,6 +109,18 @@
 				text-align: center;
 				z-index: 10;
 			}
+			.off-con {
+				margin-top: 30px;
+			}
+			.off-con p {
+				text-align: center;
+				font-size: 22px;
+			}
+			.logo-cavnas div {
+				text-align: center;
+				font-size: 20px;
+				margin-bottom: 10px;
+			}
 
 			.sub-menu {
 				display: none;	
@@ -76,7 +130,8 @@
 				padding: 5px 0;
 			}
 			.offcanvas-navigation__top {
-				margin:0 20px;
+				margin:0;
+				border-bottom: 1px solid #a4a4a4;
 			}
 
 			.overlay-open, .menu-open {	
@@ -87,7 +142,7 @@
 			.btn-close {
 				position: absolute;
 				right: 25px;
-				top: 35px;
+				top: 10px;
 
 			}
 			@media (max-width: 400px) {
@@ -101,11 +156,13 @@
 				}
 			}
 
-			@media (max-width: 270) {
+			@media (max-width: 270px) {
 				.offcanvas-navigation {
-					width: 80px;
+					width: 180px;
 				}
 			}
+
+
 		
 /*END OffCavnasMenu*/
 
@@ -625,4 +682,34 @@
 .breadcrumbs-custom div span {
 	white-space: nowrap;
 }
+.breadcrumbs-custom a:hover{
+	color: #bfbfbf;
+}
 /*end Breadcrumbs*/
+
+/*SubMenu for catalog Offcavnas*/
+
+.submenu-offcavnas {
+	position: fixed;
+	left: 30px;
+	bottom: 30px;
+	height: 50px;
+	width: 50px;
+	font-size: 20px;
+	z-index: 2000;
+	text-align: center;
+	line-height: 50px;
+	opacity: 1;
+	background-color: #212121;
+
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease-out;
+
+	-webkit-animation: pulse 2s infinite;
+	animation: pulse 2s infinite;
+}
+
+/*END Submenu*/

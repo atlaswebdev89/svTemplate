@@ -68,7 +68,7 @@ $('.btn-close').on('click', function(e){
 	});
 
 /*****************************************************************
-	* Аккордеон одна только открыта и найти родительское под меню
+	* Аккордеон для меню с иерархией одна только открыта и найти родительское под меню
 *****************************************************************/
 
 $('span.menu-expand i').on('click', function (e) {
@@ -86,35 +86,37 @@ $('span.menu-expand i').on('click', function (e) {
 
 $('.navbar a, .offcanvas-menu a').each(function() {
     	var url = window.location.pathname;
-    	var index = $(this).attr('href');    
-   
-    	if (index == '/' && index == url){  
+    	var index = $(this).attr('href');
+
+    	if (index == '/' && index == url){
         	$(this).parent().addClass('active');
     }else if (index == '/') {
         index = '/index.html/';
-    }    
+    }
     	//Поиск в строке pathUri искомого URL при вложенной структуре меню
-        if ((url.indexOf(index)) > -1) 
-            {            	
+        if ((url.indexOf(index)) > -1)
+            {
                 $(this).parent().addClass('active');
-                		//Проверка наличия родительского элемента              
-                		$(this).parent().parent('.sub-menu').show(200);
-                		$(this).parents('.has-children').addClass('active');                               	
-                		$(this).parents('.has-children').addClass('active');               
+                		//Проверка наличия родительского элемента
+							$(this).parent().parent('.sub-menu').show(200);
+							$(this).parents('.has-children').addClass('active');
             }
 });
 
-/******************************************************
-	* Scroll To Top - Кнопка возврата к верху страницы
-********************************************************/
+/*******************************************************************************************************
+	* Scroll To Top - Кнопка возврата к верху страницы, Кнопка появления кнопки фильтра в каталоге
+********************************************************************************************************/
 
 		var scrollTop = $(".scroll-to-top");
+		var filter_catalog = $(".submenu-offcavnas");
 		$(window).on('scroll',function() {
 			var topPos = $(this).scrollTop();
 			if (topPos > 350) {
 				$(scrollTop).css("opacity", "1");
+				$(filter_catalog).css("opacity", "1");
 			} else {
 				$(scrollTop).css("opacity", "0");
+				$(filter_catalog).css("opacity", "0");
 			}
 		}); 
 		//Плавный переход к top page

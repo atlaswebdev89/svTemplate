@@ -129,6 +129,7 @@
 			.sub-menu li {
 				padding: 5px 0;
 			}
+
 			.offcanvas-navigation__top {
 				margin:0;
 				border-bottom: 1px solid #a4a4a4;
@@ -693,14 +694,14 @@
 	position: fixed;
 	left: 30px;
 	bottom: 30px;
-	height: 50px;
 	width: 50px;
+	height: 50px;
+	opacity: 0;
 	font-size: 20px;
 	z-index: 2000;
 	text-align: center;
 	line-height: 50px;
-	opacity: 1;
-	background-color: #212121;
+	background-color: #ce9c6b;
 
 	-webkit-transition: all 300ms ease;
 	-moz-transition: all 300ms ease;
@@ -708,8 +709,17 @@
 	-o-transition: all 300ms ease;
 	transition: all 300ms ease-out;
 
+
+
+
 	-webkit-animation: pulse 2s infinite;
 	animation: pulse 2s infinite;
+
+}
+.submenu-offcavnas a {
+
+	color: #212121;
+
 }
 
 /*END Submenu*/

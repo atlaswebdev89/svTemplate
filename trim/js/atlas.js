@@ -84,7 +84,7 @@ $('span.menu-expand i').on('click', function (e) {
 	* Active ItemMenu - Активный пункт меню
 ********************************************************/
 
-$('.navbar a, .offcanvas-menu a').each(function() {
+$('.navbar a, .offcanvas-menu a, .parent-ul a').each(function() {
     	var url = window.location.pathname;
     	var index = $(this).attr('href');
 

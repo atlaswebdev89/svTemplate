@@ -8768,17 +8768,32 @@ textarea.form-control {
   padding: 25px;
   font-size: 15px;
   width: 100%;
-  float: left; }
+  float: left;
+  border-bottom: 1px solid #464646;
+}.sidebar-box ul {
+  list-style: none;
+  padding-left: 0;
+ }
+.sidebar-box li a {
+  transition: all 400ms ease;
+}
+ .sidebar-box ul li a:hover {
+   transform: translate(5px, 0);
+   color: #ce9c6b;
+ }
   .sidebar-box *:last-child {
     margin-bottom: 0; }
   .sidebar-box h3 {
     font-size: 18px;
     margin-bottom: 15px; }
 
+.categories ul.parent-ul ul {
+  padding-left: 20px;
+}
 .categories li, .sidelink li {
   position: relative;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
   list-style: none; }
   .categories li:last-child, .sidelink li:last-child {
     margin-bottom: 0;
@@ -8786,15 +8801,19 @@ textarea.form-control {
     padding-bottom: 0; }
   .categories li a, .sidelink li a {
     display: block;
-    color: #cccccc; }
-    .categories li a span, .sidelink li a span {
+    color: #cccccc;
+   }
+.categories li a span {
+    float: right;
+}
+    .sidelink li a span {
       position: absolute;
       right: 0;
       top: 0;
       color: #ccc; }
-  .categories li.active a, .sidelink li.active a {
-    color: #000;
-    font-style: italic; }
+  .categories li.active>a, .sidelink li.active a {
+    color: #ce9c6b;
+   }
 
 #ftco-loader {
   position: fixed;

@@ -34,6 +34,9 @@
 				transition: all 400ms ease-out;
 				overflow: auto;
 				}
+		.offcanvas-submenu-navigation li span {
+				float: right;
+		}
 				@media (min-width: 768px) {
 					.submenu-offcavnas {
 						visibility: hidden;
@@ -88,7 +91,7 @@
 			.offcanvas-menu li{
 				list-style: none;
 				position: relative;
-				padding:4px;
+				padding:4px 0;
 			}
 			
 			.offcanvas-menu a:hover{
@@ -122,7 +125,7 @@
 				margin-bottom: 10px;
 			}
 
-			.sub-menu {
+			.offcanvas-navigation .offcanvas-menu .sub-menu {
 				display: none;	
 				padding: 10px 40px;				
 			}
@@ -620,23 +623,6 @@
 	color: #fff;
 }
 
-/*Sidebar Main*/
-.sidebar-1 {
-
-}
-.sidebar-1 ul{
-	list-style: none;
-	padding: 0;
-}
-.sidebar-1 ul li {
-	transition: all 700ms ease-out;
-}
-.sidebar-1 ul li:hover {
-	transform: translate(10px, 0);
-}
-.sidebar-box {
-	border-bottom: 1px solid #464646;
-}
 
 /* Оффер блоки с параллаксом*/
 .parallax {

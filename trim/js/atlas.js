@@ -125,8 +125,20 @@ $('.navbar a, .offcanvas-menu a, .parent-ul a').each(function() {
 				scrollTop: 0
 			}, 800);
 			return false;
-		}); 
+		});
 
 
+/*******************************************************************************************************
+ * Форма проверки и отправки Заказать звонок
+ ********************************************************************************************************/
+$('#exp').click(function () {
+	$('#response_order p').text("Спасибо. Мы скоро с вами свяжемся! Спасибо. Мы скоро с вами свяжемся!")
+		.addClass("success_massage");
+	setTimeout(function(){
+						$('#response_order p').removeClass("success_massage");
+		$('#response_order p').empty();
+		$("#callBack").modal("hide");
+					}, 2000);
+})
 
 

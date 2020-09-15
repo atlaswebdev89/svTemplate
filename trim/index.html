@@ -129,7 +129,7 @@
           </div>
             <div class="col-md-6 d-flex justify-content-center align-items-center ftco-animate">
                 <div>
-                    <a href="#" class="icon d-flex justify-content-center align-items-center">
+                    <a data-toggle="modal" data-target="#callBack" class="icon d-flex justify-content-center align-items-center">
                         <span class="icon-phone2"></span>
                     </a>
                 </a>
@@ -303,45 +303,9 @@
                         </div>
                     </div>
 
-                    <div class="col-6 col-md-3   ftco-animate items">
-                        <div class="item">
-                            <a href="#" class="">
-                                <img class="img-responsive" src="img/4.jpg">
-                                    <div class="fadeText">
-                                        <h3>Мебель для детской комнаты</h3>
-                                        <p>
-                                            <span></span>
-                                        </p>
-                                    </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-3  ftco-animate items">
-                        <div class="item">
-                            <a href="#" class="">
-                                <img class="img-responsive" src="img/3.jpg">
-                                    <div class="fadeText">
-                                        <h3>КОМОДЫ Мебель для ванной комнаты Мебель для ванной комнаты </h3>
-                                        <p>
-                                            <span></span>
-                                        </p>
-                                    </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-3  ftco-animate items">
-                        <div class="item">
-                            <a href="#" >
-                                <img  src="img/5.jpg">
-                                    <div class="fadeText">
-                                        <h3>Мебель для ванной комнаты</h3>
-                                        <p>
-                                            <span></span>
-                                        </p>
-                                    </div>
-                            </a>
-                        </div>
-                    </div>
+
+
+
                 </div>            
             </div>
         </section>
@@ -1105,6 +1069,41 @@
             </a>
         </div>
         <!--Scroll to Top END -->
+
+
+    <!-- Modal window CallBack -->
+    <div class="modal fade" id="callBack" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+
+            <div class="modal-content callback">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Заказать звонок</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body ">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="nameCallBack" placeholder="Имя ..">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="phoneCallBack" placeholder="Телефон..">
+                        </div>
+                    </form>
+                </div>
+                <div id="response_order">
+                    <p></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="exp" class="btn btn-primary">Заказать</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END CallBack -->
 
 
 

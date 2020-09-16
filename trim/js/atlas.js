@@ -83,25 +83,39 @@ $('span.menu-expand i').on('click', function (e) {
 /******************************************************
 	* Active ItemMenu - Активный пункт меню
 ********************************************************/
+		//Url текущей страницы
+		var url = window.location.pathname;
+		var arr =[
+						//Ссылки в главном меню
+						$('.navbar a'),
+						//Ссылки в боковом меню и меню фильтра
+						$('.offcanvas-menu a'),
+						//Ссылки в sidebar
+						$('.parent-ul a')
+			];
+//Проход по всем ссылкам
+$.each(arr, function (index, value){
+		var elem = value;
 
-$('.navbar a, .offcanvas-menu a, .parent-ul a').each(function() {
-    	var url = window.location.pathname;
-    	var index = $(this).attr('href');
+		//Поиск ссылок в каждом элементе из массива arr
+		elem.each(function() {
+		var index = $(this).attr('href');
+		if (index == '/' && index == url){
+			$(this).parent().addClass('active');
+		}else if (index == '/') {
+			index = '/index.html/';
+		}
+		//Поиск в строке pathUri искомого URL при вложенной структуре меню
+		if ((url.indexOf(index)) > -1)
+		{
+			$(this).parent().addClass('active');
+			//Проверка наличия родительского элемента
+			$(this).parent().parent('.sub-menu').show(200);
+			$(this).parents('.has-children').addClass('active');
+		}
+	});
+})
 
-    	if (index == '/' && index == url){
-        	$(this).parent().addClass('active');
-    }else if (index == '/') {
-        index = '/index.html/';
-    }
-    	//Поиск в строке pathUri искомого URL при вложенной структуре меню
-        if ((url.indexOf(index)) > -1)
-            {
-                $(this).parent().addClass('active');
-                		//Проверка наличия родительского элемента
-							$(this).parent().parent('.sub-menu').show(200);
-							$(this).parents('.has-children').addClass('active');
-            }
-});
 
 /*******************************************************************************************************
 	* Scroll To Top - Кнопка возврата к верху страницы, Кнопка появления кнопки фильтра в каталоге
@@ -140,5 +154,14 @@ $('#exp').click(function () {
 		$("#callBack").modal("hide");
 					}, 2000);
 })
+
+
+/*Parallax*/
+if ($(window).width() > 992) {
+	$(".parallaxie").parallaxie({
+		speed: 0.7,
+		offset: 0,
+	});
+}
 
 

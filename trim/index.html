@@ -129,8 +129,8 @@
           </div>
             <div class="col-md-6 d-flex justify-content-center align-items-center ftco-animate">
                 <div>
-                    <a data-toggle="modal" data-target="#callBack" class="icon d-flex justify-content-center align-items-center">
-                        <span class="icon-phone2"></span>
+                    <a data-toggle="modal" data-target="#feedBackForm" class="icon d-flex justify-content-center align-items-center">
+                        <span class="icon-mail_outline"></span>
                     </a>
                 </a>
                 </div>
@@ -180,6 +180,9 @@
                                 </li>
                                 <li class="ftco-animate">
                                     <a href="#"><span class="icon-instagram"></span></a>
+                                </li>
+                                <li class="ftco-animate">
+                                    <a href="#" data-toggle="modal" data-target="#callBack"><span class="icon-phone2"></span></a>
                                 </li>
                             </ul>
     	    		</div>
@@ -1033,10 +1036,16 @@
                                         <li class="nav-item"><a href="contact.html">Контакты</a></li>
                                 </ul>
                         </div>
-
                         <div class="off-con">
                             <p class="namefirm">Связаться с нами</p>
+
                             <ul class="offcanvas-menu " >
+                                <li>
+                                    <div class="social-icon d-flex">
+                                        <div><a href="#"><span class="icon-vk"></span></a></div>
+                                        <div><a href="#"><span class="icon-instagram"></span></a></div>
+                                    </div>
+                                </li>
                                 <li>
                                     <a href="tel://+375297925779"><span class=" icon-phone"></span>
                                         +375(29)792-57-79</a>
@@ -1071,7 +1080,7 @@
         </div>
         <!--Scroll to Top END -->
 
-
+    feedBackForm
     <!-- Modal window CallBack -->
     <div class="modal fade" id="callBack" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -1106,6 +1115,42 @@
     </div>
     <!-- END CallBack -->
 
+    <!-- Modal window feedback -->
+    <div class="modal fade" id="feedBackForm" tabindex="-1" role="dialog" aria-labelledby="feedModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+
+            <div class="modal-content callback">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="feedModalLabel">Оставить заявку..</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body ">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="namefeedback" placeholder="Имя ..">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="emailFeedback" placeholder="E-mail ..">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="" id="" class="form-control" placeholder="Сообщение .."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div id="response_order">
+                    <p></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="exp" class="btn btn-primary">Заказать</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END feedback -->
 
 
   <script src="js/jquery.min.js"></script>

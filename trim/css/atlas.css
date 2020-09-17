@@ -34,6 +34,7 @@
 				transition: all 400ms ease-out;
 				overflow: auto;
 				}
+
 		.offcanvas-submenu-navigation li span {
 				float: right;
 		}
@@ -88,11 +89,14 @@
 			.offcanvas-menu {
 				padding-left: 0px;
 			}
+
 			.offcanvas-menu li{
 				list-style: none;
 				position: relative;
 				padding:4px 0;
 			}
+
+
 			
 			.offcanvas-menu a:hover{
 				color: #ffaa57 !important;		
@@ -118,6 +122,18 @@
 			.off-con p {
 				text-align: center;
 				font-size: 22px;
+			}
+
+			.off-con .namefirm {
+				margin-bottom: 0;
+			}
+			.off-con .social-icon {
+				font-size: 2rem;
+				justify-content: center;
+			}
+			.off-con .social-icon div {
+				padding: 5px;
+				text-align: center;
 			}
 			.logo-cavnas div {
 				text-align: center;
@@ -152,6 +168,9 @@
 			@media (max-width: 400px) {
 				.offcanvas-navigation {
 					width: 300px;
+				}
+				.logo-cavnas .namefirm {
+					font-size: 18px;
 				}
 			}
 			@media (max-width: 330px) {
@@ -674,7 +693,7 @@
 }
 /*end Breadcrumbs*/
 
-/*SubMenu for catalog Offcavnas*/
+/* Button SubMenu for catalog Offcavnas */
 
 .submenu-offcavnas {
 	position: fixed;

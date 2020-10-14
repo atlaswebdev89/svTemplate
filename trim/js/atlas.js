@@ -77,7 +77,7 @@ $('span.menu-expand i').on('click', function (e) {
 		$submenu = $this.parent().parent().children('.sub-menu');
 		//скрываем все кроме того, что должны открыть
 		$('.has-children ul.sub-menu').not($submenu).hide(300);
-		$submenu.toggle(300);
+		$submenu.slideToggle(300);
 
 
 });

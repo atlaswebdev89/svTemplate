@@ -744,3 +744,55 @@
 	visibility: visible !important;
 	transform: translate(0, -10px);
 }
+
+
+/* ========= HEADER SLIDER ADAPTIVE ============= */
+.block-contact {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+@media (max-width: 992px) {
+	.ftco-intro .wrap .social .social-icon li a span {
+		font-size: 26px !important;
+	}
+	.block-contact h3 {
+		font-size:14px !important;
+	}
+	.block-contact {
+		font-size: 12px;
+	}
+}
+@media (max-width: 767px) {
+	.ftco-intro .wrap .social .social-icon li a span {
+		font-size: 22px !important;
+	}
+	.block-contact h3 {
+		font-size:14px !important;
+	}
+	.block-contact {
+		font-size: 14px;
+	}
+	.hero-wrap h1 {
+		font-size: 30px !important;
+	}
+	.slider-text {
+		padding-bottom: 250px !important;
+	}
+}
+@media (max-width: 575px) {
+	.block-contact h3 {
+		font-size:12px !important;
+	}
+	.block-contact {
+		font-size: 10px;
+	}
+	.hero-wrap h1 {
+		font-size: 18px !important;
+	}
+	.hero-wrap h1 {
+		font-size: 22px !important;
+	}
+}
+/* ============= END HEADER SLIDER ADAPT =============*/

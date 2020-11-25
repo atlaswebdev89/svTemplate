@@ -95,17 +95,12 @@
 				position: relative;
 				padding:4px 0;
 			}
-
-
-			
 			.offcanvas-menu a:hover{
 				color: #ffaa57 !important;		
 			}
-
 			.offcanvas-menu li.active > a {
 				color: #ffaa57 !important;
 			}
-
 			.offcanvas-menu  span.menu-expand {
 				position: absolute;
 				top:10px;
@@ -140,21 +135,14 @@
 				font-size: 20px;
 				margin-bottom: 10px;
 			}
-
-			.offcanvas-navigation .offcanvas-menu .sub-menu {
-				display: none;	
-				padding: 10px 40px;				
-			}
 			.sub-menu li {
 				padding: 5px 0;
 			}
-
 			.offcanvas-navigation__top {
 				margin:0;
 				border-bottom: 1px solid #a4a4a4;
 			}
-
-			.overlay-open, .menu-open {	
+			.overlay-open, .menu-open {
 				opacity: 1;
 				visibility: visible;
 				transform: translate(0, 0);
@@ -184,9 +172,16 @@
 					width: 180px;
 				}
 			}
-
-
-		
+			.offcanvas-menu .has-children .arrow-collapse > i {
+					transition: all .3s ease;
+					font-size: 20px;
+			}
+			.offcanvas-menu .has-children .active > i{
+				color: #ffaa57;
+			}
+			.offcanvas-menu .has-children .collapsed > i {
+					transform: rotate(180deg);
+			}
 /*END OffCavnasMenu*/
 
 /*START sub menu main*/
@@ -335,14 +330,6 @@
     			animation: pulse 2s infinite;
 			}
 /* Scroll to Top END */
-
-/*Хак - устранения дрожания верхнего меню на мобильных экранах*/
-@media (max-width: 991.98px) {
-	.ftco-navbar-light {
-	    position: fixed !important;
-	}
-}
-/**/
 
 .namefirm {	
 	font-family: Cookie Arial sans-serif;
@@ -796,3 +783,6 @@
 	}
 }
 /* ============= END HEADER SLIDER ADAPT =============*/
+.copyright-botton {
+	background-color: #000;
+}

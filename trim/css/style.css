@@ -7310,11 +7310,7 @@ h1, h2, h3, h4, h5,
   left: 0;
   z-index: 3;
   top: 10px; }
-  @media (max-width: 991.98px) {
-    .ftco-navbar-light {
-      background: #000 !important;
-      top: 0;
-      position: relative; } }
+
   .ftco-navbar-light .navbar-brand {
     color: #fff; }
     @media (min-width: 768px) {
@@ -8161,7 +8157,8 @@ textarea.form-control {
 
 .ftco-footer {
   font-size: 16px;
-  padding: 7em 0;
+  padding-top: 7em;
+  padding-bottom: 0;
   background: #181818; }
   .ftco-footer .ftco-footer-logo {
     text-transform: uppercase;

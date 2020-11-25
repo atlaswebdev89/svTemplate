@@ -191,7 +191,7 @@
 	var contentWayPoint = function() {
 		var i = 0;
 		$('.ftco-animate').waypoint( function( direction ) {
-
+			console.log("START");
 			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
 				
 				i++;

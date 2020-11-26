@@ -74,11 +74,8 @@ $('.js-clone-filter').each(function() {
 
 $('.navbar-toggler').click(function () {
 	if($('.offcanvas-menu').find('.collapse li.active').length > 0)
-
 	{
-
 			let item = $('.offcanvas-menu').find('.collapse li.active').closest('.collapse');
-		console.log(item);
 			let has_children = item.parent();
 			if(!item.hasClass('show'))
 			{
@@ -149,8 +146,6 @@ $('span.menu-expand i').on('click', function (e) {
 		//скрываем все кроме того, что должны открыть
 		$('.has-children ul.sub-menu').not($submenu).hide(300);
 		$submenu.slideToggle(300);
-
-
 });
 
 /******************************************************

@@ -26,7 +26,7 @@
     <!-- START Иконочные шрифты -->
        <!-- <link rel="stylesheet" href="css/flaticon.css"> -->
         <link rel="stylesheet" href="css/icomoon.css">
-        <link rel="stylesheet" href="css/ionicons.min.css">
+        <!--<link rel="stylesheet" href="css/ionicons.min.css"> -->
         <!-- <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css"> -->
         <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- END -->
@@ -111,11 +111,62 @@
 	       </nav>
 <!-- END nav -->
 
+<!-- Mobile OffCanvas Menu Start -->
+<section>
+    <aside class="offcanvas-navigation">
+        <div class="offcanvas-navigation__inner">
+            <!-- LOGO -->
+            <div class="logo-cavnas" >
+                <div>
+                    <span class="namefirm">Ателье мебели СВ-Купе</span>
+                </div>
+            </div>
+            <!-- button close -->
+            <div class="close-button">
+                <a href="" class="btn-close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                    <span class="sr-only">Close Offcanvas Navigtion</span>
+                </a>
+            </div>
+            <div class="offcanvas-navigation__top menu-clone"></div>
+            <div class="off-con">
+                <p class="namefirm">Связаться с нами</p>
+
+                <ul class="offcanvas-menu " >
+                    <li>
+                        <div class="social-icon d-flex">
+                            <div><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></div>
+                            <div><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> </a></div>
+                            <div><a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a></div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <a href="tel://+375297925779">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            +375 (29) 792-57-79</a>
+                    </li>
+                    <li>
+                        <a href="tel://+375295506565">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            +375 (29) 550-65-65</a>
+                    </li>
+                    <li><a href="mailto:sv-ceh@tut.by">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        sv-ceh@tut.by</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </aside>
+</section>
+<!-- Mobile Menu End -->
+
 <!-- Header Slide Parallax-->
 <section>
     <div class="hero-wrap js-fullheight parallax parallaxie" style="background-image: url('images/2.jpg');">
       <div class="overlay"></div>
-
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true" >
 
@@ -177,13 +228,17 @@
                     <div class="social pl-md-5 p-4">
                         <ul class="social-icon">
                             <li class="ftco-animate">
-                                <a href="#"><span class="icon-vk"></span></a>
+                                <a href="#"><span class="fa fa-vk" aria-hidden="true"></span></a>
                             </li>
                             <li class="ftco-animate">
-                                <a href="#"><span class="icon-instagram"></span></a>
+                                <a href="#"><span class="fa fa-instagram" aria-hidden="true"></span></a>
                             </li>
                             <li class="ftco-animate">
-                                <a href="#" data-toggle="modal" data-target="#callBack"><span class="icon-phone2"></span></a>
+                                <a href="#"><span class="fa fa-telegram" aria-hidden="true"></span></a>
+                            </li>
+                            <li class="ftco-animate">
+                                <a href="#" data-toggle="modal" data-target="#callBack">
+                                    <span class="fa fa-phone-square" aria-hidden="true"></span></a>
                             </li>
                         </ul>
                     </div>
@@ -387,7 +442,7 @@
             </div>
         </div>
 </section>
-
+<!-- Дополнительные услуги -->
 <section class="ftco-section">
         <div class="container">
             <div class="row justify-content-center mb-5 pb-3">
@@ -403,7 +458,7 @@
               <div class="col-md-3 ftco-animate">
                 <div class="media d-block text-center block-6 services">
                   <div class="icon d-flex justify-content-center align-items-center mb-4">
-                    <span class="oi oi-aperture"></span>
+                      <span class="fa fa-sun-o" aria-hidden="true"></span>
                   </div>
                   <div class="media-body">
                     <h3 class="heading">Распил ДСП, МДФ, ДВП</h3>
@@ -414,7 +469,7 @@
           <div class="col-md-3 ftco-animate">
             <div class="media d-block text-center block-6 services">
               <div class="icon d-flex justify-content-center align-items-center mb-4">
-                <span class="icon-minus"></span>
+                  <span class="fa fa-minus" aria-hidden="true"></span>
               </div>
               <div class="media-body">
                 <h3 class="heading">Оклейка кромкой ПВХ</h3>
@@ -757,7 +812,6 @@
 </section>
 
 <footer class="ftco-footer ftco-section img">
-    	<div class="overlay"></div>
       <div class="container">
         <div class="row mb-3">
             <div class="col-md-2">
@@ -767,14 +821,14 @@
                 <li><a href="#" class="d-block">Услуги</a></li>
                 <li><a href="#" class="d-block">Гарантии</a></li>
                 <li><a href="#" class="d-block">Лофт</a></li>
-                <li><a href="#" class="d-block">Контакты</a></li>   
+                <li><a href="#" class="d-block">Контакты</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md-4">
             <div class="ftco-footer-widget mb-5">
               <h2 class="ftco-heading-2">Последние новости</h2>
-              
+
               <div class="block-21 mb-4 d-flex">
                 <a class="blog-img mr-4" style="background-image: url(img/6.jpg);"></a>
                 <div class="text">
@@ -798,9 +852,9 @@
           <div class="col-md-3">
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">О нас</h2>
-              <p>Огрымный опыт работы позволяет нам реализовать современные, 
+              <p>Огрымный опыт работы позволяет нам реализовать современные,
               качественные и надежные решения при проектировании и производстве мебели. Основная стратегия нашей деятельности - индивидуальный подход к каждому клиенту </p>
-              
+
             </div>
           </div>
           <div class="col-md-3">
@@ -820,7 +874,7 @@
                     </li>
 	              </ul>
 	            </div>
-                <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">       
+                <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                     <li class="ftco-animate"><a href="#"><span class="icon-vk"></span></a></li>
                     <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
               </ul>
@@ -841,59 +895,7 @@
     </svg>
 </div>
 
-<!-- OffCanvas Menu Start -->
-<section>
-         <aside class="offcanvas-navigation" id="offcanvasnav">
 
-                    <div class="offcanvas-navigation__inner">
-                       <!-- LOGO -->
-                        <div class="logo-cavnas" >
-                            <div>
-                                <span class="namefirm">
-                                    <i class="icon-quote-left"></i>
-                                        Ателье мебели СВ-Купе
-                                    <i class="icon-quote-right"></i></span>
-                            </div>
-                        </div>
-                        <!-- button close -->
-                        <div class="close-button">
-                            <a href="" class="btn-close" style="font-size: 36px;">
-                                <i class="icon-cancel"></i>
-                                <span class="sr-only">Close Offcanvas Navigtion</span>
-                            </a>
-                        </div>
-
-                        <div class="offcanvas-navigation__top"></div>
-                        <div class="off-con">
-                            <p class="namefirm">Связаться с нами</p>
-
-                            <ul class="offcanvas-menu " >
-                                <li>
-                                    <div class="social-icon d-flex">
-                                        <div><a href="#"><span class="icon-vk"></span></a></div>
-                                        <div><a href="#"><span class="icon-instagram"></span></a></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="tel://+375297925779"><span class=" icon-phone"></span>
-                                        +375(29)792-57-79</a>
-                                </li>
-                                <li>
-                                    <a href="tel://+375295506565">
-                                        <span class=" icon-phone"></span>
-                                            +375(29)550-65-65</a>
-                                </li>
-                                <li><a href="mailto:sv-ceh@tut.by">
-                                    <span class=" icon-envelope"></span>
-                                        sv-ceh@tut.by</a>
-                                </li>
-                            </ul>
-
-                        </div>
-                    </div>
-                </aside>
-    </section>
-<!-- OffCanvas Menu End -->
 
 <!-- Qicuk View Modal End -->
 <!-- Global Overlay Start -->

@@ -7525,10 +7525,10 @@ h1, h2, h3, h4, h5,
       .slider-text h1 {
         font-size: 40px; } }
   .slider-text p {
-    font-size: 20px;
+    font-size: 24px;
     line-height: 1.5;
     font-weight: 300;
-    color: rgba(255, 255, 255, 0.8); }
+    color: #ffaa57; }
     .slider-text p a {
       color: #fff;
       border-bottom: 2px solid rgba(255, 255, 255, 0.3); }

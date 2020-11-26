@@ -12,18 +12,75 @@
 		$header = $('.header'),		
 		$headerInner = $('.header__inner');
 
+/*******************************************************************************************************
+ * Клонирование меню для мобильной версии
+ ********************************************************************************************************/
+$('.js-clone-nav').each(function() {
+	var $this = $(this);
+	$this.clone().attr('class', 'offcanvas-menu main-menu-clone').appendTo('.menu-clone');
+});
+$('.main-menu-clone').find('a').each(function () {
+	$(this).removeClass();
+})
+$('.main-menu-clone .has-children').find('i').remove();
+setTimeout(function() {
+	var counter = 0;
+	$('.main-menu-clone .has-children').each(function(){
+		var $this = $(this);
+		$this.prepend('<span class="arrow-collapse collapsed menu-expand"><i class="fa fa-angle-up"></i></span>');
+		$this.find('.arrow-collapse').attr({
+			'data-toggle' : 'collapse',
+			'data-target' : '#collapseItem' + counter,
+		});
+		$this.find('> ul').attr({
+			'class' : 'collapse',
+			'id' : 'collapseItem' + counter,
+		});
+		counter++;
+	});
+}, 2);
+
+$('body').on('click', '.arrow-collapse', function(e) {
+	var $this = $(this);
+	if ( $this.closest('li').find('.collapse').hasClass('show') ) {
+		$this.removeClass('active');
+	} else {
+		$this.closest('.site-nav-wrap').find('.has-children').each(function () {
+			$(this).find('.arrow-collapse').removeClass('active').addClass('collapsed');
+			$(this).find('.collapse').collapse('hide');
+		});
+		$this.addClass('active');
+	}
+	e.preventDefault();
+});
+
 /***********************************************************************************************
 	* Открытие бокового вертикального меню
 ***************************************************************************************************/
 
 $('.navbar-toggler').click(function () {
-			$overlay.addClass('overlay-open');
-			$offcavnas.addClass('menu-open');
-			$body.addClass('body-open');
-			//Смена кнопки открытия меню
-				if ($overlay.hasClass('overlay-open')) {
-					$(this).find('div.icon').addClass("open");
-				}
+	if($('.offcanvas-menu').find('.collapse li.active').length > 0)
+
+	{
+
+			let item = $('.offcanvas-menu').find('.collapse li.active').closest('.collapse');
+		console.log(item);
+			let has_children = item.parent();
+			if(!item.hasClass('show'))
+			{
+				item.collapse('show');
+			}
+			if (!has_children.children('.arrow-collapse').hasClass('active')){
+				has_children.children('.arrow-collapse').addClass('active');
+			}
+	}
+	$overlay.addClass('overlay-open');
+	$offcavnas.addClass('menu-open');
+	$body.addClass('body-open');
+	//Смена кнопки открытия меню
+	if ($overlay.hasClass('overlay-open')) {
+		$(this).find('div.icon').addClass("open");
+	}
 });
 
 /***********************************************************************************************
@@ -168,44 +225,5 @@ if ($(window).width() > 992) {
 	$(".parallaxie").css('background-position', 'center').css( 'background-size', 'cover');
 }
 
-/*******************************************************************************************************
- * Клонирование меню для мобильной версии
- ********************************************************************************************************/
-$('.js-clone-nav').each(function() {
-	var $this = $(this);
-	$this.clone().attr('class', 'offcanvas-menu').appendTo('.offcanvas-navigation__top');
-});
-$('.offcanvas-menu').find('a').each(function () {
-	$(this).removeClass();
-})
-$('.offcanvas-menu .has-children').find('i').remove();
-setTimeout(function() {
-	var counter = 0;
-	$('.offcanvas-menu .has-children').each(function(){
-		var $this = $(this);
-		$this.prepend('<span class="arrow-collapse collapsed menu-expand"><i class="fa fa-angle-up"></i></span>');
-		$this.find('.arrow-collapse').attr({
-			'data-toggle' : 'collapse',
-			'data-target' : '#collapseItem' + counter,
-		});
-		$this.find('> ul').attr({
-			'class' : 'collapse',
-			'id' : 'collapseItem' + counter,
-		});
-		counter++;
-	});
-}, 1000);
-$('body').on('click', '.arrow-collapse', function(e) {
-	var $this = $(this);
-	if ( $this.closest('li').find('.collapse').hasClass('show') ) {
-		$this.removeClass('active');
-	} else {
-		$this.closest('.site-nav-wrap').find('.has-children').each(function () {
-			$(this).find('.arrow-collapse').removeClass('active').addClass('collapsed');
-			$(this).find('.collapse').collapse('hide');
-		});
-		$this.addClass('active');
-	}
-	e.preventDefault();
-});
+
 

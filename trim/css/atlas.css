@@ -28,15 +28,20 @@
 				display: block;
 				height: 100%;
 				z-index: 9999;
-				background-color: #484646;
+				background-color: #5b5f5e;
 				padding: 0 30px;
 				transform: translate(-200px, 0);
 				transition: all 400ms ease-out;
 				overflow: auto;
 				}
-
+		.offcanvas-submenu-navigation ul.sub-menu {
+			padding-left: 14px;
+		}
 		.offcanvas-submenu-navigation li span {
 				float: right;
+		}
+		.offcanvas-submenu-navigation .offcanvas-menu li{
+			clear: both;
 		}
 				@media (min-width: 768px) {
 					.submenu-offcavnas {

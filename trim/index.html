@@ -774,35 +774,34 @@
     	<div class="container-wrap">
     		<div class="row no-gutters d-md-flex align-items-center">
     			<div class="col-md-6 appointment ftco-animate">
-    				
-                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A32677ee5658625eeb925d5eb3705b99a4cd305b6dd2110a5b4b854ba25dd0363&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=false"></script>  
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A32677ee5658625eeb925d5eb3705b99a4cd305b6dd2110a5b4b854ba25dd0363&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=false"></script>
     			</div>
 	    		
                 <div class="col-md-6 appointment ftco-animate">
 	    			<h3 class="mb-3">Связаться с нами</h3>
-
-                    <form action="#" class="appointment-form">
+                    <form class="appointment-form mainPage-form clear-form">
 	    				<div class="d-md-flex">
 		    				<div class="form-group">
-		    					<input type="text" class="form-control" placeholder="Ваше имя">
+		    					<input type="text" name="name" class="form-control" placeholder="Ваше имя">
 		    				</div>
 
 	    				</div>
 	    				<div class="d-md-flex">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="E-mail">
+                                <input type="email" name="email" class="form-control" placeholder="E-mail">
                             </div>
 		    				<div class="form-group  ml-md-4">
-		    					<input type="text" class="form-control" placeholder="Телефон">
+		    					<input type="text" name="phone" class="form-control phone" placeholder="Телефон">
 		    				</div>
 
 	    				</div>
 	    				<div class="form-group">
-	              <textarea name="" id="" cols="30" rows="3" class="form-control" placeholder="Сообщение"></textarea>
-	            </div>
-	            <div class="form-group">
-	              <input type="submit" value="Отправить" class="btn btn-primary py-3 px-4">
-	            </div>
+	                        <textarea name="message" id="" cols="30" rows="3" class="form-control" placeholder="Сообщение"></textarea>
+	                    </div>
+                        <div class="form-group">
+                            <input type="submit" value="Отправить" class="btn btn-primary py-3 px-4">
+                            <button type="button" class="btn btn-secondary clear py-3 px-4">Очистить</button>
+                        </div>
 	    			</form>
 	    		</div>    			
     		</div>
@@ -921,27 +920,28 @@
                 </div>
 
                 <div class="modal-body ">
-                    <form class="contact-form">
+                    <form class="contact-form callBack-form">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="nameCallBack" placeholder="Имя ..">
+                            <input type="text" class="form-control" id="nameCallBack" name="name" placeholder="Имя ..">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="phoneCallBack" placeholder="Телефон..">
+                            <input type="text" class="form-control phone" name="phone" placeholder="Телефон..">
+                        </div>
+
+                        <div class="text-center pt-3 pb-3">
+                            <button type="submit" id="#exp" class="btn btn-primary">Заказать</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
                         </div>
                     </form>
                 </div>
                 <div id="#response_order">
                     <p></p>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" id="#exp" class="btn btn-primary">Заказать</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                </div>
+
             </div>
         </div>
     </div>
 <!-- END CallBack -->
-
 <!-- Modal window feedback -->
 <div class="modal fade" id="feedBackForm" tabindex="-1" role="dialog" aria-labelledby="feedModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -955,24 +955,22 @@
                 </div>
 
                 <div class="modal-body ">
-                    <form class="contact-form">
+                    <form class="contact-form feedBackForm-form clear-form">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="namefeedback" placeholder="Имя ..">
+                            <input type="text" class="form-control" id="namefeedback" name = "name" placeholder="Имя ..">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="emailFeedback" placeholder="E-mail ..">
+                            <input type="email" class="form-control" id="emailFeedback" name="email" placeholder="E-mail ..">
                         </div>
                         <div class="form-group">
-                            <textarea name="" id="" class="form-control" placeholder="Сообщение .."></textarea>
+                            <textarea class="form-control" name="message" placeholder="Сообщение.."></textarea>
+                        </div>
+                        <div class="text-center pt-3 pb-3">
+                            <button type="submit" id="exp" class="btn btn-primary">Заказать</button>
+                            <button type="button"  class="clear btn btn-secondary">Очистить</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
                         </div>
                     </form>
-                </div>
-                <div id="response_order">
-                    <p></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" id="exp" class="btn btn-primary">Заказать</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
                 </div>
             </div>
         </div>
@@ -993,6 +991,11 @@
 <script src="js/jquery.animateNumber.min.js"></script>
 <script src="js/bootstrap-datepicker.js"></script>
 <script src="js/jquery.timepicker.min.js"></script>
+
+<!-- mask phone -->
+<script src="js/jquery.maskedinput.min.js"></script>
+<!-- Plugin validate -->
+<script src="js/jquery.validate.min.js"></script>
 
 <!--Эффект прозрачности при скроллинге -->
 <script src="js/scrollax.min.js"></script>

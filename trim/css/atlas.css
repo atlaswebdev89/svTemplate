@@ -726,23 +726,6 @@
 }
 
 /*END Submenu*/
-#response_order {
-
-}
-#response_order p {
-	text-align: center;
-	color: #75db75;
-	margin-bottom: 0;
-	opacity: 0;
-	visibility: hidden;
-	transition: all 500ms ease-out;
-}
-.success_massage {
-	opacity: 1 !important;
-	visibility: visible !important;
-	transform: translate(0, -10px);
-}
-
 
 /* ========= HEADER SLIDER ADAPTIVE ============= */
 .block-contact {
@@ -797,3 +780,27 @@
 .copyright-botton {
 	background-color: #000;
 }
+
+/* Error class for Validating forms */
+.has-error {
+	border-color: #ff8286 !important;
+	color: #ff8286;
+}
+/* ========== END ========== */
+
+/* message for send data forms*/
+#loading {
+	background-image: url("../images/load-gif/loader.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+p.msg {
+	display: none;
+}
+.msg-success {
+	color: #2bec5a;
+}
+.msg-error {
+	color: #ff8286;
+}
+/* ================== */

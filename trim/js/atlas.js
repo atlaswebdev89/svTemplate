@@ -210,20 +210,6 @@ $.each(arr, function (index, value){
 		});
 
 
-/*******************************************************************************************************
- * Форма проверки и отправки Заказать звонок
- ********************************************************************************************************/
-$('#exp').click(function () {
-	$('#response_order p').text("Спасибо. Мы скоро с вами свяжемся! Спасибо. Мы скоро с вами свяжемся!")
-		.addClass("success_massage");
-	setTimeout(function(){
-						$('#response_order p').removeClass("success_massage");
-		$('#response_order p').empty();
-		$("#callBack").modal("hide");
-					}, 2000);
-})
-
-
 /*Parallax*/
 if ($(window).width() > 992) {
 	$(".parallaxie").parallaxie({
@@ -233,6 +219,204 @@ if ($(window).width() > 992) {
 }else  {
 	$(".parallaxie").css('background-position', 'center').css( 'background-size', 'cover');
 }
+
+
+/*******************************************************************************************************
+ * Валидиция данных форм
+ ********************************************************************************************************/
+
+/* MaskInputPhone*/
+/* ===================================================== */
+$('.phone').mask("+375 (99) 999-99-99",
+	{
+		completed: function(){
+			console.log("OK");
+		}
+	});
+/* ===================================================== */
+
+/* Validate for form  */
+/* Кнопка должна быть type=submit. Если type=button - надо добавить обработчик click и проверку валидации запускать вручную */
+
+/* Botton for Clear input form */
+$('.clear').on('click', function (e) {
+	e.preventDefault();
+	$(this).closest('.clear-form')[0].reset();
+});
+
+/* Изменение поведения placeholder при событиях фокусировке и потере фокуса */
+$('form').find('input, textarea').each(function (e) {
+	let input= $(this);
+	let placeholder =input.attr('placeholder');
+	input.on('focus', function (e) {
+		$(this).attr('placeholder','');
+	})
+	input.on('blur', function (e) {
+		$(this).attr('placeholder',placeholder);
+	});
+});
+/* === */
+/* ФОРМА ЗАКАЗА ЗВОНКА */
+$('.callBack-form').validate({
+	rules: {
+		name:{
+			required:true,
+			minlength: 2
+		},
+		phone:{
+			required:true,
+			minlength: 19
+		},
+	},
+	errorPlacement: function (error, element) {},
+	submitHandler: function(form) {
+		urlencodeForm(form);
+	}
+});
+
+/* Форма в модальном окне оставить заявку на главной странице*/
+$('.feedBackForm-form').validate({
+	rules: {
+		name:{
+			required:true,
+			minlength: 2
+		},
+		email:{
+			email: true,
+			required:true,
+		},
+		message: {
+			required: true,
+			minlength: 2
+		},
+	},
+	errorPlacement: function (error, element) {},
+	submitHandler: function(form) {
+		urlencodeForm(form);
+	}
+});
+
+/*Форма на главной странице и страницы контактов*/
+$('.mainPage-form, .contactPage-form').validate({
+	rules: {
+		name: {
+			required: true,
+			minlength: 2
+		},
+		subject: {
+			required: true,
+			minlength: 4
+		},
+		email: {
+			required: true,
+			email: true
+		},
+		message: {
+			required: true,
+			minlength: 10
+		},
+	},
+	messages: {
+		name: {
+			required: "Заполните поле",
+			minlength: "Слишком коротное имя"
+		},
+		email: {
+			required: "Заполните поле",
+			email: "Укажите email адрес"
+		},
+		message: {
+			required: "Заполните поле",
+			minlength: "Еще что-нибудь напишите"
+		},
+	},
+	errorClass: "has-error",
+	submitHandler: function(form) {
+		console.log("123");
+		urlencodeForm(form);
+	},
+});
+
+
+function dataForm (form) {
+	let formData = new FormData(form);
+	ajaxTransfer(form, formData);
+}
+
+function urlencodeForm(form) {
+	let form_encode = $(form).serialize();
+	ajaxTransferUrlEncode(form, form_encode);
+}
+
+/*Функция передачи данных формы*/
+function ajaxTransferUrlEncode(forma, dataForm) {
+	let uri = 'test.php';
+	let form =$(forma);
+	$.ajax({
+		type: 'POST',
+		url:uri,
+		processData: false,
+		data:dataForm,
+		timeout: 5000,
+		//Указывая тип json использовать функцию JSON.parse не надо будет ошибка
+		dataType: "json",
+		beforeSend: function (data) {
+			//Блокируем кнопку и элементы формы
+			form.find('button, input, textarea').attr('disabled', 'disabled');
+			form.append("<div id='loading' class='text-center p-3'></div>");
+		},
+		success:  function (data) {
+			form.find('#loading').remove();
+			if(data) {
+				//Если ошибок нет, очищаем форму
+				if(data.status == true){
+					//Очистка формы
+					form[0].reset();
+					//Включение кнопки и элементов формы
+					form.find('button, input, textarea').removeAttr('disabled');
+					form.find('#response_order').remove();
+					form.append("<div id='response_order' class=''><p class='msg text-center m-0 pb-3'></p> </div>");
+					form.find("p.msg").html(data.message);
+					form.find("p.msg").addClass("msg-success").fadeIn("slow");
+					setTimeout(function () {
+						//Если форма в модально окне, закрываем модальное окно при успехе
+						if (form.closest('.modal').hasClass('modal')) {
+							form.closest('.modal').modal( 'hide' );
+						}
+						$('p.msg').fadeOut("slow").removeClass('msg-success').html("");
+					}, 3000);
+				}else {
+					form.find('#response_order').remove();
+					form.append("<div id='response_order' class=''><p class='msg text-center m-0 pb-3'></p> </div>");
+					form.find("p.msg").html(data.message);
+					form.find("p.msg").addClass("msg-error").fadeIn("slow");
+					setTimeout(function () {
+						$('p.msg').fadeOut("slow");
+						//Включение кнопки и элементов формы
+						form.find('button,input, textarea').removeAttr('disabled');
+					},2000);
+				}
+			}
+		},
+		error: function(x, t, e){
+			if( t === 'timeout') {
+				// Произошел тайм-аут
+				form.find('#loading').remove();
+				//Очистка формы
+				form[0].reset();
+				//Включение кнопки и элементов формы
+				form.find('button,input, textarea').removeAttr('disabled');
+				form.find('#response_order').remove();
+				form.append("<div id='response_order' class=''><p class='msg text-center m-0 pb-3'></p> </div>");
+				form.find("p.msg").html('Превышено время ожидания');
+				form.find("p.msg").addClass("msg-error").fadeIn("slow");
+				setTimeout(function() { $('p.msg').fadeOut("slow"); }, 3000);
+			}
+		}
+	})
+}
+
+
 
 
 

@@ -146,8 +146,8 @@ var $html = $('html'),
 	$pageUrl = window.location.href.substr(window.location.href.lastIndexOf("/") + 1),
 	$overlay = $('.global-overlay'),
 	$offcavnas = $('.offcanvas-navigation');
-$SubmenuOffcavnas = $('.offcanvas-submenu-navigation');
-$header = $('.header'),
+    $SubmenuOffcavnas = $('.offcanvas-submenu-navigation');
+    $header = $('.header'),
 	$headerInner = $('.header__inner');
 
 /*******************************************************************************************************

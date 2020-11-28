@@ -9246,7 +9246,7 @@ textarea.form-control {
 /* Scroll to Top END */
 
 .namefirm {
-  color: #ffaa57;
+  color: #ffaa57 !important;
   font-style: italic;
 }
 .namefirm i {

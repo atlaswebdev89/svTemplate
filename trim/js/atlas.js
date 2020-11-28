@@ -275,7 +275,7 @@ $('.callBack-form').validate({
 });
 
 /* Форма в модальном окне оставить заявку на главной странице*/
-$('.feedBackForm-form').validate({
+$('.feedBackForm-form, .question-form').validate({
 	rules: {
 		name:{
 			required:true,
